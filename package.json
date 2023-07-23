@@ -1,0 +1,26 @@
+{
+  "name": "run-as-cluster",
+  "version": "0.1.0",
+  "description": "CLI tool that runs a Node.js script as a cluster",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "run-as-cluster": "./bin/run-as-cluster.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf bin",
+    "build": "tsc",
+    "start": "ts-node-transpile-only src",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
